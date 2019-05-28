@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+  <title></title>
 </head>
 <body>
-
- <h2>"Fem Power"</h2>
-
-
+  <h2>Posts</h2>
+  <ul>
+    <% @posts.each do |post| %>
+      <!-- <li><%= post.photo_url %></li>
+         <li><%= post.f_name %></li>
+            <li><%= post.l_name %></li> -->
+               <li><%= post.description %></li>
+    <% end %>
+  </ul>
 </body>
-</html>
+</html> 

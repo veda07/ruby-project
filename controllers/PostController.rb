@@ -1,13 +1,17 @@
 
 
 
-class PostController < Application
-  get '/test' do 
-    "hit PostController"
-  end
+class PostController < ApplicationController
+	
+# Index route working 
+	get '/' do 
+		@posts = Post.all 
 
-# get '/' do 
-# 	erb :post_index
-# end 
+		erb :post_index
+	end 
 
+	get '/new' do 
+
+		erb :post_new
+	end
 end 
