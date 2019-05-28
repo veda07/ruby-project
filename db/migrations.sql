@@ -14,7 +14,9 @@ CREATE TABLE users(
 CREATE TABLE posts(
   id SERIAL PRIMARY KEY, 
   photo_url TEXT,
-  name VARCHAR(255),
+  f_name VARCHAR(255),
+  l_name VARCHAR(255),
+  period VARCHAR(255),
   description TEXT,
   created_at TIMESTAMP NOT NULL DEFAULT now(),
   -- post belongs to user
