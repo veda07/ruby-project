@@ -58,10 +58,12 @@ CREATE TABLE users(
 
 CREATE TABLE posts(
   id SERIAL PRIMARY KEY, 
-  photo_url VARCHAR TEXT,
+  photo_url TEXT,
   name VARCHAR(255),
   description TEXT,
-  created_at TIMESTAMP NOT NULL DEFAULT now()
+  created_at TIMESTAMP NOT NULL DEFAULT now(),
+  -- posts belongs to user
+  user_id INTEGER REFERENCES users(id)
 );
 
 ```
