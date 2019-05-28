@@ -8,10 +8,13 @@
   <ul>
     <% @posts.each do |post| %>
      
-               <li><%= post.description %></li>
-               <li>
-                    <%= @posts %>
-                    <a href="/posts/<%= post.id %>/edit">Edit</a>
+               <li> 
+               <a href= "/posts/<%= post.id%>/show"><%= post.f_name %> <%= post.l_name %></a>
+                
+                <img src="<%= post.photo_url %>"/>
+                <%= post.description %>
+                
+                   <a href="/posts/<%= post.id %>/edit">Edit</a>
                     <form action="/posts/<%= post.id %>" method="POST">
                       <input type="hidden" name="_method" value="DELETE">
                       <button>Delete</button>

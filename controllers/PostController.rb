@@ -36,9 +36,17 @@ class PostController < ApplicationController
 	get '/new' do 
 		erb :post_new
 	end
+
+# Show 
+	get '/:id/show' do 
+		@post = Post.find params[:id]
+
+		erb :post_show
+	end 
+	
 # Update 
-put '/:id' do 
-	post = Post.find params[:id]
+	put '/:id' do 
+		post = Post.find params[:id]
 
 		post.photo_url   = params[:photo_url]
 		post.f_name      = params[:f_name]
