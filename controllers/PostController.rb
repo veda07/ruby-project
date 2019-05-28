@@ -9,7 +9,12 @@ class PostController < ApplicationController
 
 		erb :post_index
 	end 
+# Edit 
+	get '/:id/edit' do 
+		@post = Post.find  params[:id]
 
+		erb :post_edit
+	end
 # Create route working 
 
 	post '/' do 
@@ -31,7 +36,20 @@ class PostController < ApplicationController
 	get '/new' do 
 		erb :post_new
 	end
-# Delete 
+# Update 
+put '/:id' do 
+	post = Post.find params[:id]
+
+		post.photo_url   = params[:photo_url]
+		post.f_name      = params[:f_name]
+		post.l_name      = params[:l_name]
+		post.period	     = params[:period]
+		post.description = params[:description]
+
+		post.save
+		redirect '/posts'
+	end
+# Delete route working 
 
  	delete '/:id' do 
 
