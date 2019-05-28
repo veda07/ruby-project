@@ -15,4 +15,10 @@ require './models/UserModel'
 map ('/') {
   run ApplicationController
 } 
+
+map ('/user') {
+  run UserController
+} 
+
+
   
