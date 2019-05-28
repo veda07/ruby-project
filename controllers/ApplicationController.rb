@@ -9,6 +9,10 @@ class ApplicationController < Sinatra::Base
     :adapter => 'postgresql',
     :database => 'women_of_tech'
   )
+
+  use Rack::MethodOverride
+  set :method_override, true
+  
   set :views, File.expand_path('../../views', __FILE__)
 
  get '/' do 

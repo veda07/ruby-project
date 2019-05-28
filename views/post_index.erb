@@ -7,10 +7,16 @@
   <h2>Posts</h2>
   <ul>
     <% @posts.each do |post| %>
-      <!-- <li><%= post.photo_url %></li>
-         <li><%= post.f_name %></li>
-            <li><%= post.l_name %></li> -->
+     
                <li><%= post.description %></li>
+               <li>
+                    <%= @posts %>
+                    <form action="/posts/<%= post.id %>" method="POST">
+                      <input type="hidden" name="_method" value="DELETE">
+                      <button>Delete</button>
+                    </form>
+                </li>
+
     <% end %>
   </ul>
 </body>

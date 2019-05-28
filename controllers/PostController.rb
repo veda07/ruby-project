@@ -29,9 +29,18 @@ class PostController < ApplicationController
 
 # New route working 
 	get '/new' do 
-
 		erb :post_new
 	end
+# Delete 
+
+ 	delete '/:id' do 
+
+		post = Post.find params[:id]
+
+		post.destroy 
+
+		redirect '/posts'
+	end 
 
 end 
 
