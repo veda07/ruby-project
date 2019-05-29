@@ -46,7 +46,7 @@ class UserController < ApplicationController
 #create // login user
 	post '/login' do
 		user = User.find_by username: params[:username]
-		password = params[:params]
+		password = params[:password]
 
 		if user && user.authenticate(password)
 
