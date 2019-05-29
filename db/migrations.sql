@@ -6,9 +6,10 @@ CREATE DATABASE women_of_tech;
 
 
 CREATE TABLE users (
-  id SERIAL PRIMARY KEY,
-  username VARCHAR (255),
-  password_digest VARCHAR (255)
+    id SERIAL PRIMARY KEY,
+    username VARCHAR (255),
+    password_digest VARCHAR (255)
+
 );
 
 CREATE TABLE posts(
