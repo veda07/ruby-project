@@ -7,13 +7,17 @@
 	<h1>Edit Post</h1>
 
 	<form action="/posts/<%= @post.id %>" method="POST">
+
 		<input type="hidden" name="_method" value="PUT"/>
+
 		Image <input type="text" name ="photo_url" value="<%= @post.photo_url %>"/> </br>
 		First Name <input type="text" name="f_name" value="<%= @post.f_name %>"/> </br>
 		Last Name <input type="text" name ="l_name" value="<%= @post.l_name %>"/></br>
 		Time Period <input type="text" name="period" value="<%= @post.period %>"/></br>
 		About Her <input type="text" name="description" value="<%= @post.description %>"/></br>
+
 		<button>Update</button>
+		
 	</form>
 </body>
 </html>

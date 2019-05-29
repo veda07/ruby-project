@@ -4,17 +4,19 @@
   <title></title>
 </head>
 <body>
-  <h2>Posts</h2>
+
+  <h2>Posts</h2>    <!--   Need to find a better way to display -->
+
   <ul>
     <% @posts.each do |post| %>
      
                <li> 
-               <a href= "/posts/<%= post.id%>/show"><%= post.f_name %> <%= post.l_name %></a>
-                
-                <img src="<%= post.photo_url %>"/>
+                <a href= "/posts/<%= post.id%>/show"><%= post.f_name %> <%= post.l_name %></a></br>
+                <img src="<%= post.photo_url %>"/></br>
+                <%= post.created_at %></br>
                 <%= post.description %>
                 
-                   <a href="/posts/<%= post.id %>/edit">Edit</a>
+                  
                     <form action="/posts/<%= post.id %>" method="POST">
                       <input type="hidden" name="_method" value="DELETE">
                       <button>Delete</button>

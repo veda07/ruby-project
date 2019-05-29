@@ -12,11 +12,11 @@ class ApplicationController < Sinatra::Base
 
   use Rack::MethodOverride
   set :method_override, true
-  
+
   set :views, File.expand_path('../../views', __FILE__)
 
  get '/' do 
-    "Monumental Women in Tech."
+   redirect '/posts'      # or redirect to login page
   end 
 
 
