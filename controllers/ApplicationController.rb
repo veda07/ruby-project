@@ -15,7 +15,7 @@ class ApplicationController < Sinatra::Base
   set :views, File.expand_path('../../views', __FILE__)
 
  get '/' do 
-   redirect '/posts'      # or redirect to login page
+   redirect '/users'      # or redirect to login page
 
  end 
 

@@ -38,7 +38,7 @@ class UserController < ApplicationController
 	    	message: "Sorry, username #{params[:username]} is already taken."
 	    }
 
-	    redirect '/user/register_login' 
+	    redirect '/users/register_login' 
 		end
 
 	end
@@ -69,7 +69,7 @@ class UserController < ApplicationController
 		}
       
     
-      	redirect '/user/register_login'
+      	redirect '/users/register_login'
     	end
 
 	end
@@ -88,7 +88,7 @@ get '/logout' do
       message: "User #{username} logged out." #...so that we can use it here
     }
 
-    redirect '/users/login'
+    redirect '/users/register_login'
 
   end
 
