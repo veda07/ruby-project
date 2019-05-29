@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
   set :public_dir, File.expand_path('../../public', __FILE__)
 
  get '/' do 
-   redirect '/users'      # or redirect to login page
+   erb :home      # or redirect to login page
 
  end 
 
