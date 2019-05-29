@@ -3,8 +3,8 @@ class UserController < ApplicationController
 
 
 # get // register & login page
-	get '/register_login' do 
-		erb :register_login
+	get '/register' do 
+		erb :register
   end
 
 # create // register user
@@ -38,15 +38,19 @@ class UserController < ApplicationController
 	    	message: "Sorry, username #{params[:username]} is already taken."
 	    }
 
-	    redirect '/users/register_login' 
+	    redirect '/users/register' 
 		end
 
 	end
 
+	get '/login' do 
+		erb :login
+  end
+
 #create // login user
 	post '/login' do
-		user = user.find_by username: params[:username]
-		password = params[:params]
+		user = User.find_by username: params[:username]
+		password = params[:password]
 
 		if user && user.authenticate(password)
 
@@ -69,7 +73,7 @@ class UserController < ApplicationController
 		}
       
     
-      	redirect '/users/register_login'
+      	redirect '/users/login'
     	end
 
 	end
@@ -88,7 +92,7 @@ get '/logout' do
       message: "User #{username} logged out." #...so that we can use it here
     }
 
-    redirect '/users/register_login'
+    redirect '/'
 
   end
 

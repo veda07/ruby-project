@@ -6,6 +6,7 @@ class PostController < ApplicationController
 # Index route working 
 
 	get '/' do 
+		
 		@posts = Post.all 
 
 		erb :post_index
