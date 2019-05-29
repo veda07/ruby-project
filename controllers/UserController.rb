@@ -5,7 +5,15 @@ class UserController < ApplicationController
 # get // register & login page
 	get '/register' do 
 		erb :register
-  end
+  	end
+
+# get user_profile
+	get '/:id' do 
+		@user = User.find_by ({:id => session[:id]})
+		@user.posts
+		erb :user_profile
+  	end
+
 
 # create // register user
 	post '/register' do
@@ -22,6 +30,7 @@ class UserController < ApplicationController
 
 		session[:logged_in] = true
 	    session[:username] = user.username
+	    session[:id] = user.id
 	    session[:message] = {
 	        success: true,
 	        status: "good",
@@ -56,6 +65,7 @@ class UserController < ApplicationController
 
 		session[:logged_in] = true
 		session[:username] = user.username
+		session[:id] = user.id
 		session[:message] = {
 			success: true,
 			status: "good",
@@ -89,7 +99,7 @@ get '/logout' do
     session[:message] = {
       success: true,
       status: "neutral",
-      message: "User #{username} logged out." #...so that we can use it here
+      message: " #{username} has succesfully logged out." #...so that we can use it here
     }
 
     redirect '/'

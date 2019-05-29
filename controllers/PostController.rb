@@ -31,7 +31,8 @@ class PostController < ApplicationController
 		new_post.l_name      = params[:l_name]
 		new_post.period	     = params[:period]
 		new_post.description = params[:description]		# include user info and id here
-
+		user = User.find_by({:username => session[:username]})
+		new_post.user_id = user.id
 		new_post.save
 
 		redirect '/posts'

@@ -5,6 +5,22 @@ body {
 
 h1 {
 	font-family: 'Quicksand', sans-serif;
+	text-align: center;
+}
+
+.index_ul_box {
+
+	display: flex;
+	flex-direction: row;
+}
+
+li {
+	text-align: center;
+	list-style: none;
+}
+
+.index_photo {
+	border-radius: 150px;
 }
 
 nav {

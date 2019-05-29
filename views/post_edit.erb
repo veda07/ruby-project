@@ -17,6 +17,12 @@
 		About Her <input type="text" name="description" value="<%= @post.description %>"/></br>
 
 		<button>Update</button>
+
+		<h1>Delete Post</h1>
+		<form action="/posts/<%= post.id %>" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <button>Delete</button>
+        </form>
 		
 	</form>
 </body>

@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Home</title>
+	<title>User Profile</title>
 </head>
 <body>
 
-	<h1>Posts</h1>    <!--   Need to find a better way to display -->
+	<h1><%= session[:username] %></h1>
 
+	<h1>Your Posts</h1>   
 		<ul class="index_ul_box">
-		<% @posts.each do |post| %>
+		<% @user.posts.each do |post| %>
      
 			<a href= "/posts/<%= post.id%>/show">
 				<li> 
@@ -19,5 +20,6 @@
 
     <% end %>
   </ul>
+
 </body>
-</html> 
+</html>
