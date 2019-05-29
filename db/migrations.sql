@@ -5,10 +5,10 @@ CREATE DATABASE women_of_tech;
 \c women_of_tech
 
 
-CREATE TABLE users(
-  id SERIAL PRIMARY KEY, 
-  username VARCHAR(255),
-  password VARCHAR(255)
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR (255),
+  password_digest VARCHAR (255)
 );
 
 CREATE TABLE posts(
