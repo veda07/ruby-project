@@ -1,11 +1,10 @@
-
-
-
 class ApplicationController < Sinatra::Base
   require 'bundler'
   Bundler.require()
 
-   ActiveRecord::Base.establish_connection(
+  enable :sessions
+
+  ActiveRecord::Base.establish_connection(
     :adapter => 'postgresql',
     :database => 'women_of_tech'
   )
@@ -16,13 +15,14 @@ class ApplicationController < Sinatra::Base
   set :views, File.expand_path('../../views', __FILE__)
 
  get '/' do 
-   redirect '/posts'      # or redirect to login page
-  end 
+   redirect '/users'      # or redirect to login page
+
+ end 
 
 
- get'/test' do 
-	binding.pry
-end
+  get'/test' do 
+    binding.pry
+  end
 
 
 end 
