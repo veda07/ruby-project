@@ -28,11 +28,6 @@ class UserController < ApplicationController
 		session[:logged_in] = true
 	    session[:username] = user.username
 	    session[:id] = user.id
-	    session[:message] = {
-	        success: true,
-	        status: "good",
-	        message: "Welcome #{user.username}."
-	    }
 
 	    redirect '/posts'
 

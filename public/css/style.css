@@ -1,16 +1,38 @@
 body {
 	background-color: rgba(229,223,236,1);
 	font-family: 'Montserrat', sans-serif;
+	font-size: 14pt;
+	color: #2B075B;
 	height: 90vh;
+}
+
+#layout_header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 5px;
 }
 
 h1 {
 	font-family: 'Quicksand', sans-serif;
 }
 
+a {
+	text-decoration: none;
+	padding: 5px;
+	font-size: 16pt;
+}
+a:link {color: #2B075B;}    /* unvisited link */
+a:visited {color: #2B075B;} /* visited link */
+a:hover {text-decoration: underline;}   /* mouse over link */
+
+
 ul {
 	display: flex;
 	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	padding: 5px;
 }
 
 li {
@@ -53,6 +75,10 @@ nav:last-child {
 
 .show_page {
 	align-content: center;
+}
+
+.user_posts_title {
+	text-align: center;
 }
 
 footer {

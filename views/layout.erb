@@ -22,13 +22,7 @@
 		
 	</header>
 
-	<% if session[:message] %>
-		<p class="message <%= session[:message][:status] %>"><%= session[:message][:message]%></p>
-
-		<% 
-		end 
-		session[:message] = nil 
-		%>
+	
 
 		<%= yield %>
 		<footer>Copy Right © VA & TIMP 2019</footer>

@@ -4,10 +4,10 @@
   <title>Home</title>
 </head>
 <body>
-  <header>
-    <h1>Posts</h1>   
+  <header class="user_posts_title">
+    <h1> All Posts</h1>   
   </header>
-  
+  <main class="post_index">
 		<ul>
 		<% @posts.each do |post| %>
      
@@ -19,7 +19,7 @@
       </li><br>
     <% end %>
     </ul>
-  
+  </main>
   
 </body>
 </html> 
