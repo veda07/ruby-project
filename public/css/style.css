@@ -1,6 +1,7 @@
 body {
 	background-color: rgba(229,223,236,1);
 	font-family: 'Montserrat', sans-serif;
+	height: 90vh;
 }
 
 h1 {
@@ -32,10 +33,32 @@ nav:last-child {
 }
 
 
-#home_page {
+#home_page_header {
 	text-align: right;
+	
 }
+
+#ada {
+	background: rgb(151,132,177);
+	text-align: center;
+	margin-top: 40px;
+}
+
+#home_page_text {
+	margin: 10px 100px;
+	text-align: center;
+}
+
+
 
 .show_page {
 	align-content: center;
+}
+
+footer {
+	background: #9784B1;
+	width: 100%;
+	text-align: center;
+	position: fixed;
+	bottom: 1px;
 }
