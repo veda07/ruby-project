@@ -4,20 +4,22 @@
   <title>Home</title>
 </head>
 <body>
-
-	<h1>Posts</h1>    <!--   Need to find a better way to display -->
-
-		<ul class="index_ul_box">
+  <header>
+    <h1>Posts</h1>   
+  </header>
+  
+		<ul>
 		<% @posts.each do |post| %>
      
-			<a href= "/posts/<%= post.id%>/show">
-				<li> 
+			<li>
+        <a href= "/posts/<%= post.id%>/show">
     				<%= post.f_name %> <%= post.l_name %></br>
     				<img class="index_photo" src="<%= post.photo_url %>" height="300" width="300"/></br>
-    			</li>
     		</a>
-
+      </li><br>
     <% end %>
-  </ul>
+    </ul>
+  
+  
 </body>
 </html> 

@@ -4,11 +4,14 @@
 	<title>User Profile</title>
 </head>
 <body>
-
-	<h1><%= session[:username] %></h1>
-
-	<h1>Your Posts</h1>   
-		<ul class="index_ul_box">
+	<header id="user_profile_header">
+		<h1><%= session[:username] %></h1>
+	</header>
+	<div id="user_posts_title">
+		<h1>Your Posts</h1>   
+	</div>
+	<main>
+		<ul>
 		<% @user.posts.each do |post| %>
      
 			<a href= "/posts/<%= post.id%>/show">
@@ -18,8 +21,8 @@
     			</li>
     		</a>
 
-    <% end %>
-  </ul>
-
+    	<% end %>
+  		</ul>
+  	</main>
 </body>
 </html>

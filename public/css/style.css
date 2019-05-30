@@ -5,16 +5,15 @@ body {
 
 h1 {
 	font-family: 'Quicksand', sans-serif;
-	text-align: center;
 }
 
-.index_ul_box {
-
+ul {
 	display: flex;
 	flex-direction: row;
 }
 
 li {
+	margin: 10px;
 	text-align: center;
 	list-style: none;
 }
@@ -35,4 +34,8 @@ nav:last-child {
 
 #home_page {
 	text-align: right;
+}
+
+.show_page {
+	align-content: center;
 }

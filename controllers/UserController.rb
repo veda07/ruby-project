@@ -7,6 +7,10 @@ class UserController < ApplicationController
 		erb :register
   	end
 
+	get '/login' do 
+		erb :login
+  end
+
 # get user_profile
 	get '/:id' do 
 		@user = User.find_by ({:id => session[:id]})
@@ -14,8 +18,7 @@ class UserController < ApplicationController
 		erb :user_profile
   	end
 
-
-# create // register user
+  # create // register user
 	post '/register' do
 
 		user = User.find_by username: params[:username]
@@ -52,9 +55,6 @@ class UserController < ApplicationController
 
 	end
 
-	get '/login' do 
-		erb :login
-  end
 
 #create // login user
 	post '/login' do
@@ -88,26 +88,22 @@ class UserController < ApplicationController
 
 	end
 
-# destroy // logout
+	# destroy // logout
+	get '/logout' do
 
-get '/logout' do
+		username = session[:username] # grab username before destroying session...
 
-	username = session[:username] # grab username before destroying session...
+	    session.destroy
+	    
+	    session[:message] = {
+	      success: true,
+	      status: "neutral",
+	      message: " #{username} has succesfully logged out." #...so that we can use it here
+	    }
 
-    session.destroy
+	    redirect '/'
 
-    session[:message] = {
-      success: true,
-      status: "neutral",
-      message: " #{username} has succesfully logged out." #...so that we can use it here
-    }
-
-    redirect '/'
-
-  end
-
-
-
+	  end
 
 	
 end

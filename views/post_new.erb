@@ -4,15 +4,24 @@
 	<title></title>
 </head>
 <body>								<!-- should we include time-stamp here? -->
-	<h2>Submit a New Post</h2>
-
-	<form action="/posts" method="POST">
-		Image <input type="text" name ="photo_url"/> </br>
-		First Name <input type="text" name="f_name"/> </br>
-		Last Name <input type="text" name ="l_name"/></br>
-		Time Period <input type="text" name="period"/></br>
-		About Her <textarea type="text" name="description"></textarea></br>
-		<button>Submit</button>
-	</form>
+	<header id="edit_header">
+		<h2>Submit a New Post</h2>
+	</header>
+	
+	<main id="edit_form_box">
+		<form action="/posts" method="POST">
+			Image <input type="text" name ="photo_url"/> </br>
+			First Name <input type="text" name="f_name"/> </br>
+			Last Name <input type="text" name ="l_name"/></br>
+			Category <select name="period">
+				<option>Select Category</option>
+				<option>The Mamas of Tech </option>
+				<option>The Women of Tech</option>
+				<option>Future Women of Tech</option>
+			</select></br>
+			About Her <textarea type="text" name="description"></textarea></br>
+			<button>Submit</button>
+		</form>
+	</main>
 </body>
 </html>
