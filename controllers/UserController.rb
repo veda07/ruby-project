@@ -2,23 +2,17 @@
 class UserController < ApplicationController
 
 
-# get // register & login page
+# get // register 
 	get '/register' do 
 		erb :register
   	end
 
+# get // login
 	get '/login' do 
 		erb :login
   end
 
-# get user_profile
-	get '/:id' do 
-		@user = User.find_by ({:id => session[:id]})
-		@user.posts
-		erb :user_profile
-  	end
-
-  # create // register user
+# create // register user
 	post '/register' do
 
 		user = User.find_by username: params[:username]
@@ -88,22 +82,27 @@ class UserController < ApplicationController
 
 	end
 
-	# destroy // logout
+# destroy // user logout 
 	get '/logout' do
 
-		username = session[:username] # grab username before destroying session...
-
+		username = session[:username] # grab username before destroying session for msg.
 	    session.destroy
-	    
 	    session[:message] = {
 	      success: true,
 	      status: "neutral",
-	      message: " #{username} has succesfully logged out." #...so that we can use it here
+	      message: " #{username} has succesfully logged out." 
 	    }
 
 	    redirect '/'
 
 	  end
+
+# get user_profile // placed at the end to avoid app hitting wrong routes. 
+	get '/:id' do 
+		@user = User.find_by ({:id => session[:id]})
+		@user.posts
+		erb :user_profile
+  	end
 
 	
 end

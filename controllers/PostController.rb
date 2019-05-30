@@ -3,7 +3,7 @@
 
 class PostController < ApplicationController
 	
-# Index route working 
+# Index route 
 
 	get '/' do 
 		
@@ -12,7 +12,7 @@ class PostController < ApplicationController
 		erb :post_index
 	end 
 
-# Edit route working
+# Edit route 
 
 	get '/:id/edit' do 
 		@post = Post.find  params[:id]
@@ -20,7 +20,7 @@ class PostController < ApplicationController
 		erb :post_edit
 	end
 
-# Create route working 
+# Create route 
 
 	post '/' do 
 
@@ -38,13 +38,13 @@ class PostController < ApplicationController
 		redirect '/posts'
 	end
 
-# New route working 
+# New route  
 
 	get '/new' do 
 		erb :post_new
 	end
 
-# Show route working
+# Show route 
 
 	get '/:id/show' do 
 		@post = Post.find params[:id]
@@ -52,7 +52,7 @@ class PostController < ApplicationController
 		erb :post_show
 	end 
 	
-# Update route working 
+# Update route  
 
 	put '/:id' do 
 		updated_post = Post.find params[:id]			# include time-stamp in this?
@@ -68,7 +68,7 @@ class PostController < ApplicationController
 		redirect '/posts'
 	end
 
-# Delete route working 
+# Delete route  
 
  	delete '/:id' do 
 
