@@ -8,9 +8,10 @@
 		<h1><%= @post.f_name %> <%= @post.l_name %></h1>
 		<img class="show_image"src="<%= @post.photo_url %>" height="500" width="500"/></br>
 		<%= @post.created_at %></br>
-        <%= @post.description %></br>
+		<h3>Category:  <%= @post.period %></h3>
+    	<h3>About:</h3> <%= @post.description %><br>
 
-        <a href="/posts/<%= @post.id %>/edit">Edit</a><br>
+        <a href="/posts/<%= @post.id %>/edit"><h3>Edit<h3></a>
     </main>
 </body>
 </html>
