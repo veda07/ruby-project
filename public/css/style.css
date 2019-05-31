@@ -46,7 +46,7 @@ li {
 }
 
 nav {
-  width: 49%;
+  width: 500px;
   display: inline-block;
 }
 
@@ -63,11 +63,11 @@ nav:last-child {
 #ada {
 	background: rgb(151,132,177);
 	text-align: center;
-	margin-top: 40px;
+	margin-top: 10px;
 }
 
 #home_page_text {
-	margin: 10px 100px;
+	margin: 10px 100px 20px;
 	text-align: center;
 }
 
