@@ -14,9 +14,10 @@
 		First Name <input type="text" name="f_name" value="<%= @post.f_name %>"/> </br>
 		Last Name <input type="text" name ="l_name" value="<%= @post.l_name %>"/></br>
 		Time Period <input type="text" name="period" value="<%= @post.period %>"/></br>
-		About Her <input type="text" name="description" value="<%= @post.description %>"/></br>
+		About Her <textarea type="text" name="description" value="<%= @post.description %>"/></br><%= @post.description %></textarea>
 
 		<button>Update</button>
+	</form>
 
 		<h1>Delete Post</h1>
 		<form action="/posts/<%= @post.id %>" method="POST">
@@ -24,7 +25,6 @@
             <button>Delete</button>
         </form>
 		
-	</form>
 </body>
 </html>
 

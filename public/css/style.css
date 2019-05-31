@@ -71,14 +71,21 @@ nav:last-child {
 	text-align: center;
 }
 
-
-
 .show_page {
 	align-content: center;
+	padding-bottom: 30px;
+}
+
+.show_image {
+	border-radius: 20px;
 }
 
 .user_posts_title {
 	text-align: center;
+}
+
+#space {
+	height: 30px;
 }
 
 footer {
