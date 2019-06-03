@@ -13,7 +13,12 @@
 		Image <input type="text" name ="photo_url" value="<%= @post.photo_url %>"/> </br>
 		First Name <input type="text" name="f_name" value="<%= @post.f_name %>"/> </br>
 		Last Name <input type="text" name ="l_name" value="<%= @post.l_name %>"/></br>
-		Time Period <input type="text" name="period" value="<%= @post.period %>"/></br>
+		Category <select name="period">
+				<option>Select Category</option>
+				<option>The Mamas of Tech </option>
+				<option>The Women of Tech</option>
+				<option>Future Women of Tech</option>
+				</select></br>
 		About Her <textarea type="text" name="description" value="<%= @post.description %>"/><%= @post.description %></textarea>
 
 		<button>Update</button>

@@ -84,6 +84,11 @@ nav:last-child {
 	text-align: center;
 }
 
+textarea {
+	height: 500;
+	width: 300;
+}
+
 #space {
 	height: 30px;
 }
